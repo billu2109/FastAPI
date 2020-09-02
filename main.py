@@ -3,7 +3,7 @@ from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
-import curd
+import crud
 import database
 import models, schemas
 from fastapi import FastAPI, Depends
@@ -59,7 +59,7 @@ async def Job_post(job_request: JobRequest, db: Session = Depends(get_db)):
 
 @app.put("/job/{jobs_id}")
 async def update_job(jobs_id: int, job: schemas.Jobs, db: Session = Depends(get_db)):
-    curd.update_job(db=db, jobs_id=jobs_id, job=job)
+    crud.update_job(db=db, jobs_id=jobs_id, job=job)
     return {
         'code': 'success ',
         'massage': 'Job Post success updated'
@@ -68,7 +68,7 @@ async def update_job(jobs_id: int, job: schemas.Jobs, db: Session = Depends(get_
 
 @app.patch("/job/{jobs_id}")
 async def update_job(jobs_id: int, job: schemas.Jobs, db: Session = Depends(get_db)):
-    curd.update_job(db=db, jobs_id=jobs_id, job=job)
+    crud.update_job(db=db, jobs_id=jobs_id, job=job)
     return {
         'code': 'success ',
         'massage': 'Job Post success updated'
@@ -76,7 +76,7 @@ async def update_job(jobs_id: int, job: schemas.Jobs, db: Session = Depends(get_
 
 @app.delete("/job/{ jobs_id }")
 async def delete_data(jobs_id: int,db: Session = Depends(get_db)):
-    curd.delete_job(db=db,jobs_id=jobs_id)
+    crud.delete_job(db=db, jobs_id=jobs_id)
     return {
         'code': 'success ',
         'massage': 'Job Post success deleted'
