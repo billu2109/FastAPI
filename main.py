@@ -62,7 +62,7 @@ async def update_job(jobs_id: int, job: schemas.Jobs, db: Session = Depends(get_
     crud.update_job(db=db, jobs_id=jobs_id, job=job)
     return {
         'code': 'success ',
-        'massage': 'Job Post success updated'
+        'massage': 'Job Post successfully updated'
     }
 
 
@@ -71,7 +71,7 @@ async def update_job(jobs_id: int, job: schemas.Jobs, db: Session = Depends(get_
     crud.update_job(db=db, jobs_id=jobs_id, job=job)
     return {
         'code': 'success ',
-        'massage': 'Job Post success updated'
+        'massage': 'Job Post successfully updated'
     }
 
 @app.delete("/job/{ jobs_id }")
@@ -79,5 +79,5 @@ async def delete_data(jobs_id: int,db: Session = Depends(get_db)):
     crud.delete_job(db=db, jobs_id=jobs_id)
     return {
         'code': 'success ',
-        'massage': 'Job Post success deleted'
+        'massage': 'Job Post successfully deleted'
     }
