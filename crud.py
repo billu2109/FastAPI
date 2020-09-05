@@ -16,3 +16,4 @@ def delete_job(db: Session, jobs_id: int):
     db_job = db.query(models.Jobs).filter(models.Jobs.id == jobs_id).first()
     db.delete(db_job)
     db.commit()
+

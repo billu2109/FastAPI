@@ -13,6 +13,3 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
-
-def fetch_all(query):
-    return None

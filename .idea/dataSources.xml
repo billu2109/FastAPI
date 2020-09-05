@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Apply_Job" uuid="edf086f1-d6ef-492e-aa80-a3db7db74410">
+    <data-source source="LOCAL" name="Jobs" uuid="5c4707bc-a027-4160-89b7-8ecf82f34ae5">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\PRATAP BILLU\Desktop\FastAPI\Apply_Job.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\PRATAP BILLU\Desktop\FastAPI\Jobs.db</jdbc-url>
       <libraries>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/license.txt</url>
